@@ -5,9 +5,25 @@
 
 .warningPopup {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
 
     ion-card {
+
+        ion-card-header, ion-card-title {
+            color: white;
+            font-weight: 500;
+        }
+
+        ion-button {
+          font-weight: 700;
+        }
+
         border-radius: 15px;
+        background-color: rgb(221, 90, 90);
+        color: white;
     }
+}
+
+.close-btn {
+  --background: rgb(141, 141, 141);
 }

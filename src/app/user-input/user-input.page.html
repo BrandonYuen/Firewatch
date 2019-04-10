@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Help ons met je input!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class='cameracard'>
+      <ion-card-header>
+          <ion-card-title>Maak een foto</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content >
+          <ion-icon name="camera"></ion-icon> <b> Help ons door een foto te sturen.</b>
+      </ion-card-content>
+  </ion-card>
+
+  <ion-card class='imagecard' [hidden]="imageCardHidden">
+      <ion-card-content>
+        <img [src]="currentImage" *ngIf="currentImage">
+      </ion-card-content>
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button class='cancel-btn' (click)="cancel()">
+      <ion-icon name="close"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="takePicture()">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button class='send-btn' [hidden]="sendBtnHidden" (click)="send()">
+      <ion-icon name="checkmark"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-detailed-warning',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailedWarningPage implements OnInit {
 
-  constructor() { }
+  constructor(public navCtrl: NavController) {
+  }
+
+  openUserInputPage() {
+    this.navCtrl.navigateForward('user-input');
+  }
 
   ngOnInit() {
   }
