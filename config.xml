@@ -90,9 +90,7 @@
     <plugin name="cordova-plugin-camera" spec="^4.0.3" />
     <plugin name="cordova-plugin-geolocation" spec="4.0.1" />
     <plugin name="cordova-plugin-geofence" spec="0.7.0" />
+    <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
+        <string>Used to take pictures</string>
+    </edit-config>
 </widget>
-
-<!-- Required for iOS 10: Camera permission prompt -->
-<edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
-    <string>Used to take pictures</string>
-</edit-config>
