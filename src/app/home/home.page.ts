@@ -1,7 +1,7 @@
 import { NavController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
-import { GoogleMaps, GoogleMap, GoogleMapOptions, Environment, LatLng, Marker } from '@ionic-native/google-maps/ngx'
+import { GoogleMaps, GoogleMap, GoogleMapOptions, Environment, LatLng, Marker, Circle } from '@ionic-native/google-maps/ngx'
 import { Geolocation } from '@ionic-native/geolocation/ngx'
 
 
@@ -55,6 +55,14 @@ export class HomePage implements OnInit {
       }).then((marker:Marker) => {
         marker.showInfoWindow()
       })
+
+      let circle: Circle = this.map.addCircleSync({
+        'center': {"lat" : data.coords.latitude, "lng" : data.coords.longitude},
+        'radius': 300,
+        'strokeColor' : '#AA00FF',
+        'strokeWidth': 5,
+        'fillColor' : '#880000'
+      });
 
     });
   }
