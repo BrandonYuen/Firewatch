@@ -1,28 +1,20 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      Home
-    </ion-title>
-  </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <div class="warningPopup" padding [hidden]="warningPopupHidden">
-        <ion-card>
-            <ion-card-header>
-                <ion-card-title>Gebied met hoog natuurbrandrisico</ion-card-title>
-            </ion-card-header>
-            
-            <ion-card-content>
-                U bevind zich in een gebied met een hoog natuurbrandrisico, let goed op en houdt u aan de gespecificeerde noodverorderningen.<br>
-                <ion-button (click)='openDetailedWarning()'>Meer Informatie</ion-button>
-                <ion-button class='close-btn' (click)='closeWarningPopup()'>Sluiten</ion-button>
-            </ion-card-content>
-        </ion-card>
-    </div>
-    <ion-button (click)='showWarningPopup()'>Show Warning Popup Test</ion-button>
-    <div id="map_canvas"> </div>
+  <div id="map_canvas"> </div>
+  <div class="warningPopup" padding [hidden]="warningPopupHidden">
+      <ion-card>
+          <ion-card-header>
+              <ion-card-title>Gebied met hoog natuurbrandrisico</ion-card-title>
+          </ion-card-header>
+          
+          <ion-card-content>
+              U bevind zich in een gebied met een hoog natuurbrandrisico, let goed op en houdt u aan de gespecificeerde noodverorderningen.<br>
+              <ion-button (click)='openDetailedWarning()'>Meer Informatie</ion-button>
+              <ion-button class='close-btn' (click)='closeWarningPopup()'>Sluiten</ion-button>
+          </ion-card-content>
+      </ion-card>
+  </div>
+  <ion-button class ="test-btn" (click)='showWarningPopup()'>Show Warning Popup Test</ion-button>
 </ion-content>
