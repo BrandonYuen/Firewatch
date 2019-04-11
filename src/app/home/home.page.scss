@@ -1,3 +1,4 @@
+
 .welcome-card ion-img {
   max-height: 35vh;
   overflow: hidden;
@@ -26,4 +27,7 @@
 
 .close-btn {
   --background: rgb(141, 141, 141);
+
+#map_canvas{
+  height: 100%
 }
