@@ -14,7 +14,9 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
-  }
+  },
+  { path: 'detailed-warning', loadChildren: './detailed-warning/detailed-warning.module#DetailedWarningPageModule' },  { path: 'user-input', loadChildren: './user-input/user-input.module#UserInputPageModule' }
+
 ];
 
 @NgModule({

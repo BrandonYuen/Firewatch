@@ -1,0 +1,68 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="home"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Waarschuwing</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-card class='noodverordening'>
+        <ion-card-header>
+            <ion-card-title>Actieve noodverordening</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <ion-icon name="alert"></ion-icon> <b> Open vuur veboden!</b> <br>
+            Kampvuren, barbequeen en andere vormen van open vuur zijn verboden tot dat de noodverordening is
+            ingetrokken.
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>Brandpreventie-tips</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <p><b>Vuur maken en barbequeen mag alleen op speciale picknick- en vuurplaatsen. Houd altijd blusmiddelen als een tuinslang, emmer water of brandblusser bij de hand voor een beginnende brand.</b></p>
+            <br><p><b>Gooi afval in de daarvoor bestemde vakken. Smeulend zwerfafval en glas is regelmatig een oorzaak van natuurbrand.</b></p>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>Handelen bij brand</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <ion-list>
+                <ion-item>
+                    <ion-icon name="checkmark" item-start></ion-icon>
+                    Bel 112 en geef je locatie door.
+                </ion-item>
+                <ion-item>
+                    <ion-icon name="checkmark" item-start></ion-icon>
+                    Probeer de brand niet zelf te blussen.
+                </ion-item>
+                <ion-item>
+                    <ion-icon name="checkmark" item-start></ion-icon>
+                    Ga naar een veilige plek.
+                </ion-item>
+                <ion-item>
+                    <ion-icon name="checkmark" item-start></ion-icon>
+                    Breng anderen om je heen op de hoogte.
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-row>
+        <ion-col text-center>
+            <ion-button (click)='openUserInputPage()'>Help ons: maak een foto</ion-button>
+        </ion-col>
+      </ion-row>
+
+</ion-content>

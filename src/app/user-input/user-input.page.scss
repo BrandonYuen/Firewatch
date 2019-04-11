@@ -1,0 +1,32 @@
+.cameracard {
+    ion-card-header, ion-card-title {
+        color: white;
+    }
+    background-color: rgb(121, 194, 118);
+    color: white;
+}
+
+.imagecard {
+    ion-card-header, ion-card-title {
+        color: white;
+    }
+    background-color: rgb(59, 59, 59);
+}
+
+ion-toolbar {
+    --background: rgb(121, 194, 118);
+    color: white;
+}
+
+ion-button {
+    font-weight: 700;
+}
+
+.cancel-btn {
+  --background: rgb(212, 74, 74);
+}
+
+.send-btn {
+  --background: rgb(121, 194, 118);
+}
+

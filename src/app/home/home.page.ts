@@ -1,8 +1,9 @@
+import { NavController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { GoogleMaps, GoogleMap, GoogleMapOptions, Environment, LatLng, Marker } from '@ionic-native/google-maps/ngx'
 import { Geolocation } from '@ionic-native/geolocation/ngx'
-import { Geofence } from '@ionic-native/geofence/ngx'
+
 
 @Component({
   selector: 'app-home',
@@ -12,8 +13,9 @@ import { Geofence } from '@ionic-native/geofence/ngx'
 
 export class HomePage implements OnInit {
   map: GoogleMap
-
-  constructor(private platform: Platform, private geolocation: Geolocation, private geofence: Geofence) { 
+  warningPopupHidden: boolean = true
+  
+  constructor(private platform: Platform, private geolocation: Geolocation, private geofence: Geofence, public navCtrl: NavController) { 
     this.geofence.initialize().then(
       // resolved promise does not return a value
       () => console.log('Geofence Plugin Ready'),
@@ -24,6 +26,15 @@ export class HomePage implements OnInit {
   async ngOnInit() {
     await this.platform.ready()
     await this.loadMap()
+  }
+  
+  openDetailedWarning() {
+        //TODO: Open detailed page
+        this.navCtrl.navigateForward('detailed-warning');
+   }
+
+  showWarningPopup() {
+        this.warningPopupHidden = false
   }
 
   getLocation() {
@@ -64,4 +75,8 @@ export class HomePage implements OnInit {
     this.getLocation()
   }
 
+
+    closeWarningPopup() {
+        this.warningPopupHidden = true
+    }
 }
