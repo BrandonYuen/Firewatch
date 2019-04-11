@@ -41,7 +41,7 @@ export class UserInputPage implements OnInit {
   }
 
   send() {
-	this.navCtrl.navigateBack('home');
+	this.navCtrl.navigateForward('user-input-confirmation');
 	//TODO: Show confirmation message when back
   }
 }

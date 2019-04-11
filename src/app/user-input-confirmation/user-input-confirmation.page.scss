@@ -1,0 +1,17 @@
+.successcard {
+    ion-card-header, ion-card-title {
+        color: white;
+    }
+    background-color: rgb(121, 194, 118);
+    color: white;
+}
+
+ion-toolbar {
+    --background: rgb(121, 194, 118);
+    color: white;
+}
+
+ion-button {
+    font-weight: 700;
+}
+

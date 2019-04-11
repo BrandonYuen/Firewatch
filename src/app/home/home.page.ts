@@ -14,6 +14,8 @@ import { Geolocation } from '@ionic-native/geolocation/ngx'
 export class HomePage implements OnInit {
   map: GoogleMap
   warningPopupHidden: boolean = true
+  latLng: LatLng
+  circle: Circle
   
   constructor(private platform: Platform, private geolocation: Geolocation, public navCtrl: NavController) { 
   }
@@ -29,23 +31,24 @@ export class HomePage implements OnInit {
    }
 
   showWarningPopup() {
+        this.setCircle()
         this.warningPopupHidden = false
   }
 
   getLocation() {
     let watch = this.geolocation.watchPosition();
     watch.subscribe((data) => {
-      let latLng = new LatLng(data.coords.latitude, data.coords.longitude)
+      this.latLng = new LatLng(data.coords.latitude, data.coords.longitude)
 
       this.map = GoogleMaps.create('map_canvas', {
         camera: {
-          target: latLng,
+          target: this.latLng,
           zoom: 15
         }
       })
 
       this.map.addMarker({
-        title: 'you are here',
+        title: 'You are here',
         icon: 'red',
         animation: 'BOUNCE',
         position: {
@@ -55,15 +58,18 @@ export class HomePage implements OnInit {
       }).then((marker:Marker) => {
         marker.showInfoWindow()
       })
+      
 
-      let circle: Circle = this.map.addCircleSync({
-        'center': {"lat" : data.coords.latitude, "lng" : data.coords.longitude},
-        'radius': 300,
-        'strokeColor' : '#AA00FF',
-        'strokeWidth': 5,
-        'fillColor' : '#880000'
-      });
+    });
+  }
 
+  setCircle() {
+    this.map.addCircleSync({
+    'center': {"lat" : this.latLng.lat, "lng" : this.latLng.lng},
+    'radius': 300,
+    'strokeColor' : '#696969',
+    'strokeWidth': 5,
+    'fillColor' : '#d86363'
     });
   }
 
