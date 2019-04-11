@@ -37,7 +37,6 @@
     "cordova-plugin-geofence": "0.7.0",
     "cordova-plugin-geolocation": "4.0.1",
     "cordova-plugin-googlemaps": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps.git#multiple_maps",
-
     "core-js": "^2.5.4",
     "es6-promise-plugin": "4.2.2",
     "rxjs": "~6.3.3",
@@ -84,7 +83,6 @@
   "description": "An Ionic project",
   "cordova": {
     "plugins": {
-
       "cordova-plugin-googlemaps": {
         "API_KEY_FOR_ANDROID": "AIzaSyAXw14j_awAkCyiZJ4QVYYx0anaYWmVbIE",
         "API_KEY_FOR_IOS": "AIzaSyAXw14j_awAkCyiZJ4QVYYx0anaYWmVbIE"
@@ -93,7 +91,6 @@
       "cordova-plugin-statusbar": {},
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
-
       "cordova-plugin-ionic-webview": {
         "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
       },

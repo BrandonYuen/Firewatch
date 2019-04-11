@@ -15,7 +15,7 @@ export class HomePage implements OnInit {
   map: GoogleMap
   warningPopupHidden: boolean = true
   
-  constructor(private platform: Platform, private geolocation: Geolocation, private geofence: Geofence, public navCtrl: NavController) { 
+  constructor(private platform: Platform, private geolocation: Geolocation, public navCtrl: NavController) { 
   }
 
   async ngOnInit() {
