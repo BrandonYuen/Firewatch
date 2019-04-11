@@ -16,11 +16,6 @@ export class HomePage implements OnInit {
   warningPopupHidden: boolean = true
   
   constructor(private platform: Platform, private geolocation: Geolocation, private geofence: Geofence, public navCtrl: NavController) { 
-    this.geofence.initialize().then(
-      // resolved promise does not return a value
-      () => console.log('Geofence Plugin Ready'),
-      (err) => console.log(err + 11111)
-    )
   }
 
   async ngOnInit() {
