@@ -1,5 +1,5 @@
 # Firewatch
-A cross-platform app build with the [Ionic Framework](http://http://ionicframework.com). This app serves as a prototype for the MEDIALAB school project in which we collaborate with Creative Media Design students.
+A cross-platform app build with the [Ionic Framework](http://ionicframework.com). This app serves as a prototype for the MEDIALAB school project in which we collaborate with Creative Media Design students.
 
 ## Install instructions
 You can install this open-source (MIT) app using node.
